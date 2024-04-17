@@ -1,0 +1,45 @@
+<div class="create">
+  <h1 id="header-fName">Hey (user), create your recipe!</h1>
+  <div class="create-container">
+    <form action="" class="create-form">
+      <div class="create-basic">
+        <input type="none" id="create-img" placeholder="Add Recipe Image" />
+        <input
+          type="file"
+          id="create-file"
+          accept="image/*"
+          placeholder="Add Recipe Image"
+        />
+        <label for="create-file">Attach File</label>
+        <input type="text" id="create-name" placeholder="Recipe Name" />
+        <input
+          type="text"
+          id="create-description"
+          placeholder="Recipe Description"
+        />
+        <input type="text" id="create-time" placeholder="Recipe Total Time" />
+        <input
+          type="text"
+          id="create-serving-size"
+          placeholder="Recipe Serving Size"
+        />
+      </div>
+      <p>Enter Ingredients:</p>
+      <div class="create-ingredients">
+        <input type="text" placeholder="Ingredient #1" />
+        <input type="text" placeholder="Ingredient #2" />
+        <input type="text" placeholder="Ingredient #3" />
+        <div class="ingredient-add" onclick="addIngredient()">+</div>
+      </div>
+      <p>Enter Instructions:</p>
+      <div class="create-instructions">
+        <input type="text" placeholder="Instruction #1" />
+        <input type="text" placeholder="Instruction #2" />
+        <input type="text" placeholder="Instruction #3" />
+        <div class="instruction-add" onclick="addInstruction()">+</div>
+      </div>
+
+      <div id="create-submit" onclick="createRecipeSubmit()">Create Recipe</div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,100 @@
+.home {
+  height: 100vh;
+  background-image: linear-gradient(rgba($site-red, 0.5), rgba($site-red, 0.5)),
+    url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .home-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .home-circle-one {
+      height: 358px;
+      width: 358px;
+      border-radius: 179px;
+      background-color: $site-yellow;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-family: Caveat-Bold;
+        font-size: 24px;
+      }
+
+      p {
+        font-family: Lato;
+        font-size: 13px;
+        width: 166px;
+      }
+    }
+
+    .home-circle-two {
+      height: 168px;
+      width: 168px;
+      background-color: $site-pink;
+      border-radius: 84px;
+      position: absolute;
+      margin: 0 0 320px 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-family: Lato-Italic;
+        font-size: 10px;
+        width: 105px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    .home-banner {
+      .home-circle-two {
+        margin: 0 0 370px 190px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home {
+    .home-banner {
+      .home-circle-one {
+        width: 260px;
+        height: 260px;
+        border-radius: 130px;
+
+        h1 {
+          font-size: 17px;
+        }
+
+        p {
+          font-size: 9px;
+          width: 114px;
+        }
+      }
+      .home-circle-two {
+        width: 120px;
+        height: 120px;
+        margin: 0 0 270px 140px;
+
+        p {
+          font-size: 8px;
+          width: 82px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+.create,
+.edit {
+  min-height: 100vh;
+  background-color: #fff;
+  color: #000;
+
+  h1 {
+    padding-top: 150px;
+    font-family: Caveat-Bold;
+    font-size: 25px;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .create-container {
+    margin: 0 auto;
+    padding-bottom: 90px;
+    width: 75%;
+
+    p {
+      font-size: 20px;
+      font-family: Lato;
+      margin: 80px auto -40px auto;
+    }
+
+    div {
+      input {
+        display: block;
+        width: 100%;
+        margin-top: 80px;
+        height: 40px;
+        font-size: 20px;
+        font-family: Lato;
+        background: transparent;
+        border: 0;
+        border-bottom: solid #000 3px;
+      }
+
+      ::placeholder {
+        color: #000;
+      }
+    }
+
+    .create-basic {
+      position: relative;
+      #create-file {
+        display: none;
+      }
+      label {
+        height: 36px;
+        width: 110px;
+        border-radius: 26px;
+        position: absolute;
+        right: 0;
+        bottom: 488px;
+        font-family: Caveat;
+        font-size: 17px;
+        background-color: $site-darkpink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .create-ingredients,
+    .create-instructions {
+      position: relative;
+
+      p {
+        color: $site-red;
+        font-family: Lato-Italic;
+        margin-top: 20px;
+      }
+
+      .ingredient-add,
+      .instruction-add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        background-color: $site-red;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        bottom: 8px;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #create-submit,
+  #edit-submit {
+    width: 422px;
+    height: 52px;
+    color: #000;
+    background-color: $site-darkpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Caveat;
+    font-size: 25px;
+    border-radius: 26px;
+    border: none;
+    margin: 125px auto 70px auto;
+    cursor: pointer;
+  }
+
+  //   #edit {
+  //     width: 130px;
+  //     height: 45px;
+  //     color: #000;
+  //     background-color: $site-darkpink;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     font-family: Lato;
+  //     font-size: 20px;
+  //     border-radius: 20px;
+  //     margin: 30px auto;
+  //   }
+}
+
+@media screen and (max-width: 768px) {
+  .create,
+  .edit {
+    h1 {
+      width: 80%;
+    }
+
+    .create-container {
+      width: 80%;
+      margin-top: -20px;
+
+      div {
+        input {
+          margin-top: 60px;
+        }
+      }
+    }
+
+    #create-submit,
+    #edit-submit {
+      width: 354px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .create,
+  .edit {
+    .create-container {
+      margin-top: -30px;
+
+      div {
+        input {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    #create-submit,
+    #edit-submit {
+      width: 283px;
+    }
+  }
+}

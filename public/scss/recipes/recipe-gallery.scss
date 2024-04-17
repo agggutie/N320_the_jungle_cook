@@ -1,0 +1,234 @@
+.recipes,
+.your-recipes {
+  min-height: 1000px;
+  background-image: linear-gradient(
+      rgba($site-green, 0.5),
+      rgba($site-green, 0.5)
+    ),
+    url(../images/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  .recipes-content,
+  .your-recipes-content {
+    padding-top: 200px;
+    padding-bottom: 147px;
+    min-height: 100px;
+    width: 83%;
+
+    h1 {
+      font-family: Caveat-Bold;
+      font-size: 25px;
+      display: block;
+    }
+
+    .recipes-container,
+    .your-recipes-container {
+      min-height: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .recipe-box {
+        height: 263px;
+        width: 524px;
+        display: flex;
+        margin: 50px auto;
+
+        .recipe-img {
+          img {
+            height: 263px;
+            width: 300px;
+            border-radius: 24px;
+            object-fit: cover;
+          }
+
+          .recipe-buttons {
+            background-color: red;
+
+            .recipe-btn {
+              height: 42px;
+              width: 128px;
+              border-radius: 26px;
+              font-family: Caveat;
+              font-size: 20px;
+              background-color: $site-yellow;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              cursor: pointer;
+            }
+
+            #recipe-btn-view {
+              margin: 110px 86px;
+            }
+
+            #recipe-btn-edit {
+              margin: 278px 10px 0 15px;
+            }
+
+            #recipe-btn-delete {
+              margin: 278px 15px 0 158px;
+            }
+          }
+        }
+
+        .recipe-desc {
+          width: 224px;
+          border-radius: 24px;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          font-family: Lato;
+          align-items: center;
+
+          h1 {
+            font-size: 15px;
+            margin: 46px auto 20px auto;
+            width: 140px;
+            text-decoration: underline 2px solid #000;
+            text-align: center;
+          }
+
+          h2 {
+            font-size: 9px;
+            max-width: 160px;
+          }
+
+          p {
+            font-size: 9px;
+            padding-left: 10px;
+            width: 60px;
+          }
+
+          // how to make text wrap if it's the same word? wraps if it's different words but a single one just carries on
+
+          .recipe-time-servings {
+            text-align: center;
+            min-height: 30px;
+            max-width: 84px;
+            display: flex;
+            margin-bottom: 17px;
+
+            .recipe-time-img {
+              width: 25px;
+              height: 25px;
+              background-image: url(../images/time.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+            }
+
+            .recipe-servings-img {
+              width: 25px;
+              height: 25px;
+              background-image: url(../images/servings.svg);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+            }
+
+            p {
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .recipes,
+  .your-recipes {
+    .recipes-content,
+    .your-recipes-content {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .recipes,
+  .your-recipes {
+    .recipes-content,
+    .your-recipes-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        width: 524px;
+      }
+
+      .recipes-container,
+      .your-recipes-container {
+        width: 524px;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// why does it require nesting for the 1330px one but not 1220? It works with a background color but not the width
+
+@media screen and (max-width: 640px) {
+  .recipes,
+  .your-recipes {
+    .recipes-content,
+    .your-recipes-content {
+      padding-top: 120px;
+
+      h1 {
+        font-size: 20px;
+        width: 300px;
+      }
+
+      .recipes-container,
+      .your-recipes-container {
+        margin-top: -50px;
+        width: 300px;
+
+        .recipe-box {
+          flex-direction: column;
+          min-height: 320px;
+          margin-bottom: 50px;
+          width: 300px;
+
+          .recipe-img {
+            height: 150px;
+
+            img {
+              height: 150px;
+            }
+          }
+
+          .recipe-desc {
+            width: 300px;
+            min-height: 200px;
+
+            font-size: 8px;
+
+            h1 {
+              margin: 20px auto;
+              font-size: 10px;
+            }
+
+            h2,
+            p {
+              font-size: 8px;
+            }
+
+            .recipe-time-servings {
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.navHolder {
+  height: 132px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -132px;
+  position: relative;
+  z-index: 10;
+
+  .nav-logo {
+    margin-left: 50px;
+    width: 224px;
+    height: 55px;
+    background-image: url(../images/logo.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .nav-links {
+    margin: auto 50px auto auto;
+
+    a,
+    div {
+      font-family: Caveat;
+      font-size: 25px;
+      margin-left: 20px;
+      text-decoration: none;
+      color: #000;
+
+      span {
+        height: 52px;
+        width: 158px;
+        width: 300px;
+        background-color: $site-yellow;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .nav-bars {
+    display: none;
+    flex-direction: column;
+    margin-right: 37px;
+
+    .nav-bar {
+      display: block;
+      width: 25px;
+      margin: 3px 0;
+      height: 3px;
+      background-color: #000;
+      border-radius: 3px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.navHolder.active-nav {
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-bars.active {
+  .nav-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .nav-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .navHolder {
+    .nav-logo {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .navHolder {
+    position: relative;
+    z-index: 10;
+
+    .nav-links {
+      position: absolute;
+      width: 100vw;
+      opacity: 0;
+      right: 1000px;
+      top: 100px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease-in-out;
+      margin: 0 auto;
+
+      a {
+        margin: 30px auto;
+      }
+    }
+
+    .nav-links.active {
+      opacity: 1;
+      right: 0;
+      left: 0;
+    }
+
+    .nav-bars {
+      display: flex;
+    }
+  }
+}
