@@ -1,6 +1,6 @@
 # N320_the_jungle_cook
 
-The Jungle Cook is a Single Page Application (SPA) that allows users to browse, create, and share recipes. The app features a user-friendly interface and the ability to create, edit, and save users your favorite recipes.
+The Jungle Cook is a Single Page Application (SPA) that allows users to browse, create, and share recipes. The app features a user-friendly interface and the ability to create, edit, and save users favorite recipes.
 
 # Hosting Link
 
